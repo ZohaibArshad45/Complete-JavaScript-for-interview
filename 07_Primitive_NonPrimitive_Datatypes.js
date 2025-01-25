@@ -1,16 +1,23 @@
-// ----------------- Primitive --------------------
+// ----------------- Primitive (by value) --------------------
 // its give us copy of data type, jo b hum copy ma change kry gy wo sirf copy ma change ho ga 
 
-// 7 Types : String, Number , Boolearn, Null, Undefined, Symbol, BigInt
+// 7 Types of Primitive : 
+//  String, 
+//  Number , 
+//  Boolearn, 
+//  Null, 
+//  Undefined,
+//  Symbol,
+//  BigInt
 
 let a =23
 let b= a
-console.log(`Befor change : ${a}`)
-console.log(`Befor change : ${b}`)
+console.log(`Befor change A : ${a}`)
+console.log(`Befor change B : ${b}`)
 
 b= 25
-console.log(`After change : ${a}`)
-console.log(`After change : ${b}`)
+console.log(`After change A : ${a}`)
+console.log(`After change B : ${b}`)
 
 
 // ---------------------- Reference (non-Primitive)  -----------
@@ -20,22 +27,29 @@ console.log(`After change : ${b}`)
 // Typeof obejct is object
 //  function ka funtion but we called it object function
 
+// ---- Array
 let arr = [2,4,4,5,5,6]
 console.log(typeof (arr)) // object , null ka b type object ata h
 
-// Function
+//----- Function
 let myFucntion = function(){
     console.log('Function Run')
 }
-myFucntion()
-console.log(typeof myFucntion)
+myFucntion() // console.log(typeof myFucntion) 
 
-// Object 
- let myObject = {
+// ----- arrow function 
+const greet = () => {
+    console.log("Hello, World!");
+};
+greet();
+
+
+// ---- Object 
+let myObject = {
     name : 'Zohaib',
     rollNumner : 23,
     Clog : 'IUB'
- }
- console.log(myObject.name)
+}
+console.log(myObject.name)
 console.log(`Type of myObject is ${typeof myObject}`)
 

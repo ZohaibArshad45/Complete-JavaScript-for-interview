@@ -11,7 +11,7 @@
 
 
 let a = 23  // number
-let b = 3434534534534534534534n // bigint
+let b = 3434534534534534534534n // bigINT
 let c = 'Zohaib' // string
 let d = '12' // string
 let kuchbhi = null // null ki always type object ay gi
