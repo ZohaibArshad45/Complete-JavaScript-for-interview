@@ -56,3 +56,22 @@ let obj7 = {
 // let obj9 = Object.assign({}, obj5, obj6, obj7)
 let obj9 = {...obj5, ...obj6, ...obj7}
 console.log(obj9)
+
+
+// ============================== Object to array convert ===================
+// //  object to array covert
+// const obj = { name: "Zohaib", age: 24, country: "Pakistan" };
+// const keysArray = Object.keys(obj);
+// console.log(keysArray); // Output: ["name", "age", "country"]
+
+// // 2nd method object to array covert
+// const obj = { name: "Zohaib", age: 24, country: "Pakistan" };
+// const valuesArray = Object.values(obj);
+// console.log(valuesArray); // Output: ["Zohaib", 24, "Pakistan"]
+
+
+// 3rd method object to array covert
+// const obj = { name: "Zohaib", age: 24, country: "Pakistan" };
+// const entriesArray = Object.entries(obj);
+// console.log(entriesArray); 
+// // Output: [["name", "Zohaib"], ["age", 24], ["country", "Pakistan"]]
