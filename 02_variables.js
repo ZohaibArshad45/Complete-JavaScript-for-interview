@@ -14,6 +14,7 @@ console.log(emailId)
 const accountId = 232323
 // const accountId = 43 // its show us error
 console.log(accountId);
+
 // other and best way to write 
 console.log(`This is my account ID : ${accountId}`);
 
