@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .main-con {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+        height: 100vh;
+        /* background-color: #212121; */
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-con {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    #box1 {
+        background-color: #ff0000;
+    }
+
+    #box2 {
+        background-color: #00ff00;
+    }
+
+    #box3 {
+        background-color: #0000ff;
+    }
+
+    #box4 {
+        background-color: #ffff00;
+    }
+</style>
+
+<body>
+    <div class="main-con">
+        <h1 style="color: black;">Color Scheme Switch</h1>
+        <div class="box-con">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const body = document.querySelector("body");
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach((box) => {
+        // console.log(box);
+        box.addEventListener("click", function (e) {
+            if (e.target.id === "box1") {
+                body.style.backgroundColor = "#ff0000"; // Red
+            } else if (e.target.id === "box2") {
+                body.style.backgroundColor = "#00ff00"; // Green
+            } else if (e.target.id === "box3") {
+                body.style.backgroundColor = "#0000ff"; // Blue
+            } else if (e.target.id === "box4") {
+                body.style.backgroundColor = "#ffff00"; // Yellow
+            }
+        });
+    });
+</script>
+
+</html>
