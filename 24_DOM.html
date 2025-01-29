@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="container">
+        <h4 class="items">Monday</h4>
+        <h4 class="items">Tuesday</h4>
+        <h4 class="items">Wednesday</h4>
+        <h4 class="items">Thursday</h4>
+    </div>
+    
+</body>
+<script>
+    // add new items
+    function myFunction(newLanguage) {
+        const newitems = document.createElement('items')
+        newitems.innerHTML = `${newLanguage}`
+        document.querySelector('.container').appendChild(newitems)
+    }
+    myFunction('Friday')
+
+
+    // let items =document.querySelectorAll('h4')
+    // items.forEach((item)=>{
+    //     item.addEventListener('click',function(e){
+    //         e.target.style.color = 'red'
+    //     })
+    // })
+</script>
+</html>
