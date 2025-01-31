@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 | Guess the Number</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <h2>Guess the Number</h2>
+            <input type="number" id="guess" placeholder="Enter a number">
+            <input type="submit" value="Submit" class="submit">
+        </div>
+        <div class="result">
+            <p class="lastGuess">Previous Guess</p>
+            <p class="remainingGuess">Guesses Left</p>
+            <p class="message">Lower or Higher</p>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const min = 1;
+    const max = 100;
+    //  const randomNumber = Math.floor(Math.random() * 100) + 1;
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    const guess = document.querySelector('#guess');
+    const submit = document.querySelector('.submit');
+    const lastGuess = document.querySelector('.lastGuess');
+    const remainingGuess = document.querySelector('.remainingGuess');
+    const result = document.querySelector('.result')
+
+    const p = document.createElement('p')
+
+    let prevGuess = []
+    let numGuess = 1
+
+    let playGame = true
+
+
+
+    // submit.addEventListener('click', function(){
+    //     const number = parseInt(guess.value);
+    //     if(number > randomNumber){
+    //         lastGuess.innerHTML = `Last Guess: ${number}`;
+    //         remainingGuess.innerHTML = `Remaining Guess: ${10 - 1}`;
+    //     }else if(number < randomNumber){
+    //         lastGuess.innerHTML = `Last Guess: ${number}`;
+    //         remainingGuess.innerHTML = `Remaining Guess: ${10 - 1}`;
+    //     }else{
+    //         lastGuess.innerHTML = `Last Guess: ${number}`;
+    //         remainingGuess.innerHTML = `Remaining Guess: ${10 - 1}`;
+    //     }
+    // })
+
+
+</script>
+</html>

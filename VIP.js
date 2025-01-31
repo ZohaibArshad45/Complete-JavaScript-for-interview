@@ -1,5 +1,5 @@
 // ForEach, map, Filter, find, findIndex, Indexof, Object, Function, async
-
+// math.random also learn before
 // // =========================== forEach ========================================================
 // // Array
 // // ForEach
