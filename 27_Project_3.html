@@ -28,7 +28,7 @@
     const max = 100;
     //  const randomNumber = Math.floor(Math.random() * 100) + 1;
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    const guess = document.querySelector('#guess');
+    const userInput = document.querySelector('#guess');
     const submit = document.querySelector('.submit');
     const lastGuess = document.querySelector('.lastGuess');
     const remainingGuess = document.querySelector('.remainingGuess');
@@ -40,6 +40,52 @@
     let numGuess = 1
 
     let playGame = true
+
+    if (playGame){
+        submit.addEventListener('click', function(e){
+            e.preventDefault()
+            const number = parseInt(userInput.value);
+            console.log(number)
+            validateGuess(guess)
+        })
+    }
+
+    function validateGuess(guess){
+        if(isNaN(guess)){
+            alert(`Please enter a  valid number`)
+        }
+        else if( guess < min || guess > max){
+            alert(`Please enter a number between ${min} and ${max}`)
+        }
+        else{
+            checkGuess(guess)
+        }
+        
+    }
+
+    function checkGuess(guess){
+        // 
+    }
+
+    function displayGuess(guess){
+        // 
+    }
+
+    function displayMessage(message){
+        //
+    }
+
+    function endGame(){
+        // 
+    }
+
+    function newGame(){
+        // 
+    }
+
+
+
+
 
 
 
