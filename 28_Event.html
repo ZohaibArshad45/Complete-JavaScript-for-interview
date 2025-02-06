@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            margin: 50px auto;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="first">Change Color</h1>
+    <h1 id="sec">Get alert</h1>
+    <div id="box">Move your mouse or right-click!</div>
+</body>
+<script>
+    let first = document.querySelector("#first");
+    let sec = document.querySelector("#sec");
+
+    first.addEventListener("click", function () {
+        first.style.color = "red";
+    });
+
+    sec.addEventListener("click", function () {
+        alert("hello");
+    });
+
+    // type, timeout, interval
+    // timestamp , delay
+    // preventDefault, target , toElement, srcElement
+    // currentTarget, clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, metaKey, shiftKey
+    // keycode
+
+    // These terms are related to **JavaScript event handling**. 
+
+    // ### **1. Event Types & Timing**
+    // - **`type`** – The type of event (e.g., `'click'`, `'keydown'`, `'mousemove'`).
+    // - **`timeout`** – Used with `setTimeout()` to delay code execution.
+    // - **`interval`** – Used with `setInterval()` to execute code repeatedly at a fixed time interval.
+    // - **`timestamp`** – The time when the event occurred.
+    // - **`delay`** – The time delay before an action is executed.
+
+    // ### **2. Event Targets & Elements**
+    // - **`preventDefault()`** – Prevents the default action of an event (e.g., stopping a link from navigating).
+    // - **`target`** – The element that triggered the event.
+    // - **`toElement`** – The element the mouse pointer is moving to (deprecated, use `relatedTarget`).
+    // - **`srcElement`** – Similar to `target`, but mainly used in older browsers.
+    // - **`currentTarget`** – The element on which the event listener is attached.
+
+    // ### **3. Mouse Event Properties**
+    // - **`clientX`, `clientY`** – The x and y coordinates of the mouse pointer **relative to the viewport**.
+    // - **`screenX`, `screenY`** – The x and y coordinates of the mouse pointer **relative to the screen**.
+
+    // ### **4. Keyboard & Modifier Keys**
+    // - **`altKey`** – `true` if the **Alt** key is pressed during the event.
+    // - **`ctrlKey`** – `true` if the **Ctrl** key is pressed.
+    // - **`metaKey`** – `true` if the **Meta** key (Command key on Mac, Windows key on Windows) is pressed.
+    // - **`shiftKey`** – `true` if the **Shift** key is pressed.
+    // - **`keyCode`** – The numeric code representing the key pressed (deprecated, use `event.key` instead).
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const box = document.getElementById("box");
+
+        // // Mouse event listener
+        // box.addEventListener("mousemove", (event) => {
+            // console.log("Mouse Event:");
+            // console.log(`Type: ${event.type}`);
+            // console.log(`ClientX: ${event.clientX}, ClientY: ${event.clientY}`);
+            // console.log(`ScreenX: ${event.screenX}, ScreenY: ${event.screenY}`);
+            // console.log(`Target: ${event.target.tagName}`);
+            // console.log(`Current Target: ${event.currentTarget.tagName}`);
+        // });
+
+        // // Keyboard event listener
+        // document.addEventListener("keydown", (event) => {
+        //     console.log("Keyboard Event:");
+        //     console.log(`Key Pressed: ${event.key}`);
+        //     console.log(`KeyCode: ${event.keyCode}`);
+        //     console.log(`Alt Key: ${event.altKey}`);
+        //     console.log(`Ctrl Key: ${event.ctrlKey}`);
+        //     console.log(`Shift Key: ${event.shiftKey}`);
+        //     console.log(`Meta Key: ${event.metaKey}`);
+        // });
+
+        // Prevent default action on right-click
+        box.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            console.log("Right-click is disabled on this element!");
+        });
+    });
+
+
+
+</script>
+
+</html>
