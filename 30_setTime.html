@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>My name is Zohaib</h1>
+        <button id="Start">Start</button>
+        <button id="Stop">Stop</button>
+    </div>
+
+    <script>
+        let start = document.querySelector("#Start")
+        let stop = document.querySelector("#Stop")
+        let h1 = document.querySelector("h1")
+        
+        let count = 0
+
+        start.addEventListener("click", function () {
+            interval = setInterval(() => {
+                count++
+                console.log(count)
+                h1.innerText = count
+            }, 1000);
+        })
+
+        stop.addEventListener("click", function () {
+            clearInterval(interval)
+        })
+        
+    </script>
+    
+</body>
+</html>

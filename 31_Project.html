@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Bg color</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+    </div>
+
+    <script>
+        // random color\
+        let randomColor = () => {
+            let hex = "0123456789ABCDEF"
+            let color = "#"
+
+            for (let i = 0; i < 6; i++) {
+                // console.log(Math.floor(Math.random()*16))
+                color += hex[Math.floor(Math.random() * 16)]
+            }
+            return color
+        }
+
+
+        let box = document.querySelector('.box')
+        let start = document.querySelector('.start')
+        let stop = document.querySelector('.stop')
+        let interval; // To store interval ID
+
+
+
+            start.addEventListener('click', function () {
+                if (!interval) { // Prevent multiple intervals
+                interval = setInterval(() => {
+                    box.style.backgroundColor = randomColor();
+                }, 1000);
+            }
+        })        
+
+        stop.addEventListener('click', function () {
+            clearInterval(interval); // Stop changing colors
+            interval = null; // Reset interval variable
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
