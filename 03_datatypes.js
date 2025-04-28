@@ -5,7 +5,7 @@
 // Boolean => true/false
 // null => standalone value
 // undefined => 
-// symbol => unique li
+// symbol => unique things
 // object
 
 
